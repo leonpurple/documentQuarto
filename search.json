@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "aboutgit/aboutgit.html",
+    "href": "aboutgit/aboutgit.html",
+    "title": "Sobre Git",
+    "section": "",
+    "text": "Git"
+  },
+  {
+    "objectID": "aboutgit/aboutgit.html#operaciones-principales-para-los-que-inician-a-utilizar-git",
+    "href": "aboutgit/aboutgit.html#operaciones-principales-para-los-que-inician-a-utilizar-git",
+    "title": "Sobre Git",
+    "section": "Operaciones principales para los que inician a utilizar git",
+    "text": "Operaciones principales para los que inician a utilizar git\nSi estás iniciando a utilizar Git, aquí hay algunas operaciones básicas que debes conocer:\n\nInicializar un repositorio: Este es el primer paso para comenzar a usar Git en un proyecto. Se puede hacer ejecutando el comando git init en la línea de comandos dentro de la carpeta del proyecto.\nAgregar archivos al área de seguimiento: Una vez que se ha inicializado el repositorio, puedes agregar archivos al área de seguimiento con el comando git add. Esto significa que Git ahora vigilará cualquier cambio en esos archivos.\nRealizar un commit: Una vez que hayas agregado archivos al área de seguimiento, puedes hacer un commit para guardar los cambios en la historia del repositorio. Este se puede hacer con el comando git commit -m \"mensaje del commit\"\"\nVer el historial de commits: Puedes ver la historia de los cambios en un repositorio con el comando git log.\nSincronizar con un repositorio remoto: Si trabajas en un equipo o deseas tener una copia de seguridad de tu proyecto en un servidor remoto, puedes sincronizar tu repositorio local con un repositorio remoto mediante los comandos git push y git pull.\n\nEstas son solo algunas de las operaciones básicas de Git, pero existen muchas otras opciones y herramientas para administrar y trabajar con repositorios en Git."
+  },
+  {
+    "objectID": "aboutjavascript/aboutjavascript.html",
+    "href": "aboutjavascript/aboutjavascript.html",
+    "title": "Quarto Markdown: OJS Cells",
+    "section": "",
+    "text": "OJS code cells {ojs} behave a bit differently than cells in traditional notebooks, and have many options available to control their display and layout.\nObservable is a platform for publishing and sharing interactive data-driven documents, an online editor for composing, cells are executed in a sequence, with outputs being generated and displayed as part of the notebook, changes made to cells can be re-executed, updated in real-time."
+  },
+  {
+    "objectID": "aboutjavascript/aboutjavascript.html#observable-js-cells",
+    "href": "aboutjavascript/aboutjavascript.html#observable-js-cells",
+    "title": "Quarto Markdown: OJS Cells",
+    "section": "1 Observable JS Cells",
+    "text": "1 Observable JS Cells\n\n1.1 Cell Execution\nA critical difference between OJS cell execution and traditional notebooks is that in OJS cells do not need to be defined in any particular order.\nBecause execution** is fully reactive**, the runtime will automatically execute cells in the correct order based on how they reference each other. This is different than a traditional notebook with linear cell execution."
+  },
+  {
+    "objectID": "aboutjavascript/aboutjavascript.html#examples",
+    "href": "aboutjavascript/aboutjavascript.html#examples",
+    "title": "Quarto Markdown: OJS Cells",
+    "section": "2 Examples",
+    "text": "2 Examples\n\n2.1 Example 1: viewof\n\nlink\n\n\n\"choose one color\"\n\n\n\n\n\n\n\nviewof color = Inputs.select([\"red\", \"orange\", \"yellow\", \"green\", \"blue\", \"violet\"], {value: \"green\"})\ncolor\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2.2 Example 2: Histiogram\n\nlink\n\n\nheight = 250\nnumbers = Float64Array.from({length: 1000}, d3.randomNormal())\nimport {chart as histogram} with {numbers as data, height} from \"@d3/histogram@261\"\nhistogram\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2.3 Example 3: Cars data\n\nlink\n\n\nimport {viewof selection as cars} from \"@d3/brushable-scatterplot\"\nviewof cars\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2.4 Example 6: mortgage\n\nmortgage\n\n\nviewof amount = Inputs.range([100000, 1500000], {label: \"Mortgage amount\", step: 100000})\nviewof interest = Inputs.range([2, 8], {label: \"Interest rate (%)\", step: .1})\nviewof duration = Inputs.range([10, 30], {label: \"Duration\", step: 5})\n\"Values:\"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\namount\n\n\n\n\n\n\n\ninterest\n\n\n\n\n\n\n\nduration\n\n\n\n\n\n\n\n\nA mortgage for a house purchased for  at an interest rate of % over  years.\nIt costs a total of  dolars.\n\n\n2.5 Example 5: Fetch with loading…\n\nObservable JS\n\n\nd3 = require(\"d3\");\nviewof fetchButton = Inputs.button(\"fetch\", {async function() {\n    loadingMessage.value = \"Loading...\";\n    let contributors = {};\n    contributors.value = await d3.json(\"https://api.github.com/repos/albertprofe/wiki/stats/contributors\");\n    \n    let commits = contributors.value.map(contributor => {\n      loadingMessage.value = \"done\";\n      let author = contributor.author;\n      return {\n        name: author.login,\n        title: author.login,\n        group: author.type,\n        value: contributor.total\n      }\n    });\n    Inputs.table(commits, { sort: \"value\", reverse: true })\n}});\nviewof loadingMessage = Inputs.button(\"...\");\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n  Quarto Markdown: publishing \n\n\n\n  top \n\n\n\n Quarto Markdown: cheat-sheet"
+  },
+  {
+    "objectID": "designpatterns/designpatterns.html",
+    "href": "designpatterns/designpatterns.html",
+    "title": "Design Patterns",
+    "section": "",
+    "text": "Pincipios SOLID y patrones de Diseño"
+  },
+  {
+    "objectID": "designpatterns/designpatterns.html#por-que-usar-desing-patterns",
+    "href": "designpatterns/designpatterns.html#por-que-usar-desing-patterns",
+    "title": "Design Patterns",
+    "section": "¿ Por que usar Desing Patterns…?",
+    "text": "¿ Por que usar Desing Patterns…?\n“Los patrones de diseño en Java son una herramienta esencial para cualquier desarrollador. Mejoran la calidad del código al proporcionar soluciones estandarizadas y reutilizables a problemas comunes en el desarrollo de software. Al utilizarlos, los desarrolladores pueden reducir la cantidad de código duplicado, mejorar la legibilidad y la mantenibilidad del código y hacer que el desarrollo sea más eficiente y organizado. ¡Optimiza tu código con patrones de diseño en Java!”"
+  },
+  {
+    "objectID": "designpatterns/designpatterns.html#los-5-patrones-de-diseño-más-utilizados-en-java-son",
+    "href": "designpatterns/designpatterns.html#los-5-patrones-de-diseño-más-utilizados-en-java-son",
+    "title": "Design Patterns",
+    "section": "Los 5 patrones de diseño más utilizados en Java son:",
+    "text": "Los 5 patrones de diseño más utilizados en Java son:\n\n👉Developer skills summary\n\nPatrón de Singleton\nPatrón de Fabrica\nPatrón de Estrategia\nPatrón Observer\nPatrón Decorador\n\n\n\n\nPatrón de Singleton: Asegura que una clase solo tenga una instancia y provee un punto de acceso global a ella.\nPatrón de Fabrica: Define una interfaz para crear objetos en una superclase, pero deja que las subclases decidan qué clases crear.\nPatrón de Estrategia: Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.\nPatrón de Observer: Define una dependencia uno-a-muchos entre objetos, de manera que cuando un objeto cambia su estado, todos sus dependientes son notificados y actualizados automáticamente.\nPatrón de Decorador: Anade responsabilidades a objetos dinámicamente en tiempo de ejecución.\n\n\nSingletonFabricaEstrategiaObserverDecorador\n\n\n\n\npublic class Singleton {\n  private static Singleton instance = null;\n\n  private Singleton() {}\n\n  public static Singleton getInstance() {\n    if (instance == null) {\n      instance = new Singleton();\n    }\n    return instance;\n  }\n\n}\n\n\n\n En este ejemplo, la clase Singleton contiene\n una única propiedad estática llamada instance,\n que es una instancia de la clase Singleton.\n La clase tiene un constructor privado para \n evitar que la clase sea instanciada\n por cualquier otra parte del código.\n\nLa clase tiene un método estático llamado \ngetInstance que es el único punto de\nacceso a la instancia de la clase. \nSi la propiedad instance todavía es null,\nse crea una nueva instancia de la clase Singleton.\nDe lo contrario, se retorna la instancia existente.\n\nEste patrón garantiza que la clase solo tenga\nuna única instancia, lo que asegura que los datos \ncompartidos en la aplicación sean consistentes y seguros.\n\n\n\n\n\nEjemplo de código de Patrón de Diseño de fábrica en Java:\n\ninterface Shape {\n   void draw();\n}\n\nclass Circle implements Shape {\n   @Override\n   public void draw() {\n      System.out.println(\"Se dibuja un círculo\");\n   }\n}\n\nclass Rectangle implements Shape {\n   @Override\n   public void draw() {\n      System.out.println(\"Se dibuja un rectángulo\");\n   }\n}\n\nclass Square implements Shape {\n   @Override\n   public void draw() {\n      System.out.println(\"Se dibuja un cuadrado\");\n   }\n}\n\nclass ShapeFactory {\n   public Shape getShape(String shapeType) {\n      if (shapeType == null) {\n         return null;\n      }\n      if (shapeType.equalsIgnoreCase(\"CIRCLE\")) {\n         return new Circle();\n      } else if (shapeType.equalsIgnoreCase(\"RECTANGLE\")) {\n         return new Rectangle();\n      } else if (shapeType.equalsIgnoreCase(\"SQUARE\")) {\n         return new Square();\n      }\n      return null;\n   }\n}\n\nclass FactoryPatternDemo {\n   public static void main(String[] args) {\n      ShapeFactory shapeFactory = new ShapeFactory();\n\n      Shape shape1 = shapeFactory.getShape(\"CIRCLE\");\n      shape1.draw();\n\n      Shape shape2 = shapeFactory.getShape(\"RECTANGLE\");\n      shape2.draw();\n\n      Shape shape3 = shapeFactory.getShape(\"SQUARE\");\n      shape3.draw();\n   }\n}\n\n\n\n\n\nEste código ilustra una implementación \nbásica del patrón de diseño de fábrica en Java.\nLa clase ShapeFactory es una fábrica que\nproduce objetos de diferentes tipos de formas.\nEn el método getShape de la clase ShapeFactory,\nse determina qué tipo de forma se desea crear \nen función del argumento shapeType.\nLuego, se devuelve la forma apropiada.\nEl programa principal en la clase FactoryPatternDemo \nusa la fábrica para crear diferentes\nobjetos de formas y dibujar los objetos.\n\n\n\n\n\n\n\nEjemplo de código utilizando el Patrón de Diseño Estrategia \n\nimport java.util.ArrayList;\nimport java.util.List;\n\ninterface Strategy {\n    int doOperation(int num1, int num2);\n}\n\nclass AdditionStrategy implements Strategy {\n    @Override\n    public int doOperation(int num1, int num2) {\n        return num1 + num2;\n    }\n}\n\nclass SubtractionStrategy implements Strategy {\n    @Override\n    public int doOperation(int num1, int num2) {\n        return num1 - num2;\n    }\n}\n\nclass Context {\n    private Strategy strategy;\n\n    public Context(Strategy strategy) {\n        this.strategy = strategy;\n    }\n\n    public int executeStrategy(int num1, int num2) {\n        return strategy.doOperation(num1, num2);\n    }\n}\n\npublic class StrategyPatternExample {\n    public static void main(String[] args) {\n        List<Context> contexts = new ArrayList<>();\n        contexts.add(new Context(new AdditionStrategy()));\n        contexts.add(new Context(new SubtractionStrategy()));\n\n        for (Context context : contexts) {\n            System.out.println(\"10 + 5 = \" + context.executeStrategy(10, 5));\n            System.out.println(\"10 - 5 = \" + context.executeStrategy(10, 5));\n        }\n    }\n}\n\n\nEl patrón de diseño de estrategia permite \nseleccionar una estrategia de entre\nvarias posibles al resolver un problema,\nde manera que se puedan cambiar las estrategias\nen tiempo de ejecución sin tener que modificar\nel código que utiliza la estrategia.\nEn este ejemplo, el contexto es el que\nselecciona la estrategia para realizar \nuna operación matemática específica\n(suma o resta), y el código que utiliza\nla estrategia no necesita conocer los\ndetalles de cómo se realiza la \noperación, sólo invoca el método\nexecuteStrategy del contexto.\n\n\n\nEjemplo de código en Java para uso de Patron Observer\n\nimport java.util.ArrayList;\nimport java.util.List;\n\ninterface Observer {\n    void update();\n}\n\ninterface Subject {\n    void registerObserver(Observer observer);\n    void removeObserver(Observer observer);\n    void notifyObservers();\n}\n\nclass ConcreteObserver implements Observer {\n    private int state;\n\n    @Override\n    public void update() {\n        // Actualizar el estado del observador con el estado del sujeto\n    }\n\n    public int getState() {\n        return state;\n    }\n\n    public void setState(int state) {\n        this.state = state;\n    }\n}\n\nclass ConcreteSubject implements Subject {\n    private List<Observer> observers = new ArrayList<>();\n    private int state;\n\n    @Override\n    public void registerObserver(Observer observer) {\n        observers.add(observer);\n    }\n\n    @Override\n    public void removeObserver(Observer observer) {\n        observers.remove(observer);\n    }\n\n    @Override\n    public void notifyObservers() {\n        for (Observer observer : observers) {\n            observer.update();\n        }\n    }\n\n    public int getState() {\n        return state;\n    }\n\n    public void setState(int state) {\n        this.state = state;\n        notifyObservers();\n    }\n}\n\npublic class ObserverPatternExample {\n    public static void main(String[] args) {\n        ConcreteSubject subject = new ConcreteSubject();\n\n        ConcreteObserver observer1 = new ConcreteObserver();\n        ConcreteObserver observer2 = new ConcreteObserver();\n\n        subject.registerObserver(observer1);\n        subject.registerObserver(observer2);\n\n        subject.setState(5);\n\n        System.out.println(\"Observer 1: \" + observer1.getState());\n        System.out.println(\"Observer 2: \" + observer2.getState());\n    }\n}\n\nEl patrón de diseño Observer permite que un objeto,\nconocido como sujeto, notifique a sus dependientes,\nconocidos como observadores, cuando su estado cambia.\nEn este ejemplo, el sujeto es ConcreteSubject y \nlos observadores son ConcreteObserver.\nEl sujeto mantiene una lista de observadores registrados,\ny los notifica a todos cuando su estado cambia,\ninvocando el método update de cada uno.\nLos observadores actualizan su propio estado\nen respuesta a la notificación.\n\n\n\n\n\ninterface Component {\n    String operation();\n}\n\nclass ConcreteComponent implements Component {\n    @Override\n    public String operation() {\n        return \"Concrete Component\";\n    }\n}\n\nabstract class Decorator implements Component {\n    protected Component component;\n\n    public Decorator(Component component) {\n        this.component = component;\n    }\n\n    @Override\n    public String operation() {\n        return component.operation();\n    }\n}\n\nclass ConcreteDecoratorA extends Decorator {\n    public ConcreteDecoratorA(Component component) {\n        super(component);\n    }\n\n    @Override\n    public String operation() {\n        return \"Concrete Decorator A (\" + super.operation() + \")\";\n    }\n}\n\nclass ConcreteDecoratorB extends Decorator {\n    public ConcreteDecoratorB(Component component) {\n        super(component);\n    }\n\n    @Override\n    public String operation() {\n        return \"Concrete Decorator B (\" + super.operation() + \")\";\n    }\n}\n\npublic class DecoratorPatternExample {\n    public static void main(String[] args) {\n        Component component = new ConcreteComponent();\n        System.out.println(\"Result: \" + component.operation());\n\n        component = new ConcreteDecoratorA(component);\n        System.out.println(\"Result: \" + component.operation());\n\n        component = new ConcreteDecoratorB(component);\n        System.out.println(\"Result: \" + component.operation());\n    }\n}\n\nEl patrón de diseño Decorador permite agregar\ndinámicamente responsabilidades adicionales a un objeto.\nEn este ejemplo, la interfaz Component define \nla operación a decorar y la clase ConcreteComponent\nimplementa la operación sin ninguna decoración.\nLas clases ConcreteDecoratorA y ConcreteDecoratorB\nson decoradores que agreguen responsabilidades\nadicionales a la operación original.\nEn la función main, se crea un objeto\nConcreteComponent y se lo decoran con ConcreteDecoratorA\ny ConcreteDecoratorB para ver cómo cambia la operación."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome ComboBackend",
+    "section": "",
+    "text": "Bienvenidos a la pagina web especializada en backend Develoment. Somos un equipo de desarrolladores apasionados por la tecnología y la programación, y estamos aquí para ayudarte a aprender , comprender y aplicar los conceptos y técnicas más actuales en el desarrollo de backend."
+  },
+  {
+    "objectID": "labs/labs.html",
+    "href": "labs/labs.html",
+    "title": "Laboratories",
+    "section": "",
+    "text": "Backlog course\n\n\nAlways in Quarto-Markdown format and code in GitHub repositories or Organitzations.\nDeliveries via github:\n\n\n\nCode\nDate\nDescription\n\n\n\n\nto apph2\n10/05/2023\nDelivery\n\n\n\nThree-tier architecture (controller, service, repository)\n\nDependencies:\n\nLombok\nSpring Web\nDeveloperTools\nH2 Database\nSpring Data JPA\n\nconfiguration file: application.properties\n\n\nEntity Modeling\nnotations\n\n@Entity\n@Table\n@Data\n\n\n\nCreate Sevice Methods\nin this app I call the controller through the interface with the notation\n\n@Service\n\nin this interface the contracts are defined which the business logic is implemented The first thing is to call the Repository\njpa The JpaRepository extension makes it possible for the Interface to use these implicit methods\nFunctional Programming: Exceptions\nLogic in the methods implemented in UserServiceImp.java with Jpa\n\n\nCreate Controller\nthe UserController.java class will make use of the service via URL class stereotyped with the notation\n\n@Rescontroller\n\n\n\nHTTP Verbs for Rest Services\n\n@PostMaping\n@GetMapping\n@PutMapping\n@DeleteMapping\n\n\n\n\n\npostman method saveUserId()\n\n\n\n\n\n\n\npostman method getUser()\n\n\n\n\n\n\n\npostman method deleteUser()\n\n\n\n\n\n\n\npostman ERROR method upDate()\n\n\n\n\n\nconsola H2 Data Base\n\n\n\n\nconsole H2\n\n\n\n\n\n\n\nCode\nDate\nDescription\n\n\n\n\nto apph2react\n10/05/2023\nDelivery\n\n\n\nCreate the apph2react to consume data from the rest api apph2 Backend Spring boot.\naxios library for hhtp requests with fetch await method\nI install axios through the command line by entering the directory of the current react project\ncd apph2react\nnpm i axios\nI create the main file for the Userlist.jsx component and to declare it inside the fragment that the App.js component returns\n\n\nreact application consuming apph2 backend\n\n\n\n\nconsole H2"
+  },
+  {
+    "objectID": "programmingparadigms/programmingparadigms.html#los-paradigmas-adecuados-puede-marcar-la-diferencia-en-la-calidad-y-eficiencia-del-código-producido",
+    "href": "programmingparadigms/programmingparadigms.html#los-paradigmas-adecuados-puede-marcar-la-diferencia-en-la-calidad-y-eficiencia-del-código-producido",
+    "title": "Programming Paradigms",
+    "section": "Los paradigmas adecuados puede marcar la diferencia en la calidad y eficiencia del código producido",
+    "text": "Los paradigmas adecuados puede marcar la diferencia en la calidad y eficiencia del código producido\n\n👉 Developer skills summary\n\nImperative Paradigm\nFunctional Paradigm\nDeclarative Paradigm\nReactive Paradigm\nObject Oriented Paradigms\n\n\n\nLos paradigmas de programación son un conjunto de herramientas y técnicas que facilitan la resolución de problemas y la implementación de soluciones efectivas en el desarrollo de software. Conocer y aplicar los paradigmas adecuados puede marcar la diferencia en la calidad y eficiencia del código producido, por lo que es importante que los programadores estén familiarizados con los principales paradigmas utilizados en el mercado."
+  },
+  {
+    "objectID": "programmingparadigms/programmingparadigms.html#tipos-de-paradigmas-de-programación",
+    "href": "programmingparadigms/programmingparadigms.html#tipos-de-paradigmas-de-programación",
+    "title": "Programming Paradigms",
+    "section": "5 tipos de paradigmas de programación",
+    "text": "5 tipos de paradigmas de programación\nExisten varios tipos de paradigmas de programación que se deben elegir en función del lenguaje de programación que se utilice. La elección adecuada de los paradigmas garantizará que el proceso de programación sea eficiente y sin problemas. Aquí te presentaremos 5 de los paradigmas de programación más importantes."
+  },
+  {
+    "objectID": "programmingparadigms/programmingparadigms.html#paradigma-imperativo",
+    "href": "programmingparadigms/programmingparadigms.html#paradigma-imperativo",
+    "title": "Programming Paradigms",
+    "section": "Paradigma Imperativo",
+    "text": "Paradigma Imperativo\nEn el mundo de la programación, el paradigma imperativo o de procedimientos es uno de los más populares. Este enfoque permite a los programadores crear software mediante la definición de procedimientos detallados. Se utiliza una serie de instrucciones que explican de manera clara y concisa el funcionamiento del código, permitiendo a los usuarios seguir el proceso con facilidad."
+  },
+  {
+    "objectID": "programmingparadigms/programmingparadigms.html#paradigma-funcional",
+    "href": "programmingparadigms/programmingparadigms.html#paradigma-funcional",
+    "title": "Programming Paradigms",
+    "section": "Paradigma Funcional",
+    "text": "Paradigma Funcional\nEl paradigma funcional se basa en el uso de funciones matemáticas para lograr un resultado. Este tipo de programación se enfoca en el resultado deseado y no tanto en los detalles de cómo se llega a él. Esto lo hace ideal para el ámbito académico, donde se busca comprender conceptos profundos y no necesariamente crear soluciones eficientes en términos de tiempo y recursos. Es un enfoque distinto al del paradigma imperativo, donde se preocupa más por las instrucciones y pasos que llevan a un resultado."
+  },
+  {
+    "objectID": "programmingparadigms/programmingparadigms.html#paradigma-declarativo",
+    "href": "programmingparadigms/programmingparadigms.html#paradigma-declarativo",
+    "title": "Programming Paradigms",
+    "section": "Paradigma Declarativo",
+    "text": "Paradigma Declarativo\nEl paradigma declarativo se enfoca en el resultado desde el comienzo. Con un enfoque en la determinación automática del camino hacia una solución, este paradigma puede ser muy eficiente en la programación, siempre y cuando se tenga una comprensión clara del proceso que se está llevando a cabo"
+  },
+  {
+    "objectID": "programmingparadigms/programmingparadigms.html#paradigma-reactivo",
+    "href": "programmingparadigms/programmingparadigms.html#paradigma-reactivo",
+    "title": "Programming Paradigms",
+    "section": "Paradigma Reactivo",
+    "text": "Paradigma Reactivo\nParadigma reactivo: Este enfoque se centra en el análisis de los flujos de datos, tanto finitos como infinitos, con el objetivo de responder a las demandas durante el desarrollo del proyecto, manteniendo un alto nivel de escalabilidad y una rápida respuesta a los cambios en los valores generados por los flujos de datos."
+  },
+  {
+    "objectID": "programmingparadigms/programmingparadigms.html#paradigmas-orientados-a-objetos",
+    "href": "programmingparadigms/programmingparadigms.html#paradigmas-orientados-a-objetos",
+    "title": "Programming Paradigms",
+    "section": "Paradigmas orientados a objetos",
+    "text": "Paradigmas orientados a objetos\nEn el paradigma orientado a objetos, se enfoca en trabajar con objetos y componentes de código. Cada objeto es una pieza independiente que, cuando se combina con otros, forma parte del sistema que está siendo desarrollado. Este enfoque proporciona una estructura clara y eficiente para el proceso de programación.\n\n\n\n\n\n\n\n\nLenguaje\nParadigmas\n\n\n\n\nScala\nImperativo, orientado a objetos, funcional, genérico y concurrente\n\n\nErlang\nFuncional, orientado a objetos y funcional\n\n\nPerl\nImperativo, orientado a objetos y funcional\n\n\nPHP\nImperativo, orientado a objetos, funcional y reflexivo\n\n\nJavaScript\nImperativo, orientado a objetos (prototipos) y funcional\n\n\nJava\nImperativo, orientado a objetos, reflexivo y genérico\n\n\nPython y Ruby\nImperativo, orientado a objetos, reflexivo y funcional\n\n\nC++\nImperativo, orientado a objetos, funcional y genérico\n\n\nC#\nImperativo, orientado a objetos, funcional (lambda), reflexivo y genérico\n\n\nLisp\nOrientado a objetos, funcional y declarativo\n\n\nProlog\nLógico y declarativo"
+  },
+  {
+    "objectID": "vocabulary/vocabulary-compound-verbs.html",
+    "href": "vocabulary/vocabulary-compound-verbs.html",
+    "title": "General Vocabulary",
+    "section": "",
+    "text": "//To -do"
+  },
+  {
+    "objectID": "vocabulary/vocabulary-irregular-verbs.html",
+    "href": "vocabulary/vocabulary-irregular-verbs.html",
+    "title": "General Vocabulary",
+    "section": "",
+    "text": "//To -do"
+  },
+  {
+    "objectID": "vocabulary/vocabulary-modals-verbs.html",
+    "href": "vocabulary/vocabulary-modals-verbs.html",
+    "title": "General Vocabulary",
+    "section": "",
+    "text": "Modal verbs: They are a group of auxiliary verbs that are used to express possibility, obligation, permission, etc.\nThe most common modal verbs are:\n\ncan - could - may - might - must - shall - should - will - would.\n\nThese verbs do not conjugate and do not have infinitives, gerunds, or participles."
+  },
+  {
+    "objectID": "vocabulary/vocabulary-reflexive-verbs.html",
+    "href": "vocabulary/vocabulary-reflexive-verbs.html",
+    "title": "General Vocabulary",
+    "section": "",
+    "text": "//To -do"
+  },
+  {
+    "objectID": "vocabulary/vocabulary-regulars-verbs.html",
+    "href": "vocabulary/vocabulary-regulars-verbs.html",
+    "title": "General Vocabulary",
+    "section": "",
+    "text": "Regular verbs in English are characterized by following a rule to form the simple past and past participle. This rule generally consists of adding “-ed” to the infinitive of the verb. For example, the verb “walk” becomes “walked” in simple past and past participle. However, there are some exceptions to this rule, such as verbs that end in “e” and only need to add a “d,” or verbs that change the last letter of the infinitive by adding “-ed.”\nIn summary, regular verbs in English are those that follow a rule to form the simple past and past participle by adding “-ed” to the infinitive of the verb. Although there are some exceptions, most regular verbs follow this rule. Knowing this rule makes it easier to learn and remember how to conjugate regular verbs in English.\nGenerally, regular verbs in English are divided into three groups according to the way “-ed” is added to form the past and past participle. Below is a list of regular verbs in English, separated by group:\n\n\n\n\nInfinitive\nSimple Past\nPast Participio\n\n\n\n\ncarry\ncarried\ncarried\n\n\ncopy\ncopied\ncopied\n\n\ncry\ncried\ncried\n\n\ndry\ndried\ndried\n\n\nfry\nfried\nfried\n\n\nhurry\nhurried\nhurried\n\n\nmarry\nmarried\nmarried\n\n\nstudy\nstudied\nstudied\n\n\ntry\ntried\ntried\n\n\nworry\nworried\nworried"
+  },
+  {
+    "objectID": "vocabulary/vocabulary-transitevsintransitive.html",
+    "href": "vocabulary/vocabulary-transitevsintransitive.html",
+    "title": "General Vocabulary",
+    "section": "",
+    "text": "transitive vs. Intransitive: A transitive verb requires a direct object to complete its meaning, while an intransitive verb does not.\nFor example:\nin the sentence “I eat an apple”, “eat” is a transitive verb because it has a direct object (“an apple”).\nOn the other hand, in the sentence “I sleep” (I sleep), “sleep” is an intransitive verb because it does not have a direct object."
+  },
+  {
+    "objectID": "vocabulary/vocabulary.html",
+    "href": "vocabulary/vocabulary.html",
+    "title": "General Vocabulary",
+    "section": "",
+    "text": "Technical terms and definitions"
+  },
+  {
+    "objectID": "vocabulary/vocabulary.html#vocabulary",
+    "href": "vocabulary/vocabulary.html#vocabulary",
+    "title": "General Vocabulary",
+    "section": "1 Vocabulary",
+    "text": "1 Vocabulary\nregulars verbs |\nirregulars verbs|\ntransitive vs. Intransitive |\nmodal verbs|\nCompound verbs |\n Reflexive verbs |"
+  }
+]
