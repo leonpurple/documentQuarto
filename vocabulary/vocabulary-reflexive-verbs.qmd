@@ -1,0 +1,17 @@
+---
+title: "General Vocabulary"
+subtitle: Reflexive Verbs
+author: Cruz Martinez
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+
+categories: [vocabulary]
+toc: true
+number-sections: true
+format:
+  html
+---
+---
+
+//To -do

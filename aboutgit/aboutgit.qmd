@@ -1,0 +1,27 @@
+---
+title: "Sobre Git"
+---
+![Git](/images/aboutgit/git.jpg)
+
+## Operaciones principales para los que inician a utilizar git
+
+Si estás iniciando a utilizar Git, aquí hay algunas operaciones básicas que debes conocer:
+
+ - **Inicializar un repositorio:**
+ Este es el primer paso para comenzar a usar Git en un proyecto. Se puede hacer ejecutando el comando ```git init``` en la línea de comandos **dentro de la carpeta del proyecto.**
+
+ - **Agregar archivos al área de seguimiento:** 
+ Una vez que se ha **inicializado** el **repositorio**, puedes agregar archivos al área de seguimiento con el comando ```git add ```. Esto significa que Git ahora vigilará cualquier cambio en esos archivos.
+
+ - **Realizar un commit:** 
+ Una vez que hayas agregado archivos al área de seguimiento, puedes **hacer un commit** para guardar los cambios en la historia del repositorio. Este se puede hacer con el comando ```git commit -m "mensaje del commit""```
+
+ - **Ver el historial de commits:**
+ Puedes ver la historia de los cambios en un repositorio con el comando ```git log```.
+
+ - **Sincronizar con un repositorio remoto:**
+ Si trabajas en un equipo o deseas tener una **copia de seguridad de tu proyecto en un servidor remoto**, puedes **sincronizar tu repositorio local** con un repositorio remoto mediante los comandos ```git push``` y ```git pull```.
+
+ *Estas son solo algunas de las operaciones básicas de* **Git**, *pero existen muchas otras opciones y herramientas para administrar y trabajar con repositorios en* **Git**.
+
+ 

@@ -1,0 +1,415 @@
+---
+title: "Design Patterns"
+---
+![Pincipios SOLID y patrones de Diseño](/images/designpatterns/image-designpatterns.png){.preview-image}
+
+## ¿ Por que usar Desing Patterns...?
+
+"Los patrones de diseño en Java son una herramienta esencial para cualquier desarrollador. Mejoran la calidad del código al proporcionar soluciones estandarizadas y reutilizables a problemas comunes en el desarrollo de software. Al utilizarlos, los desarrolladores pueden reducir la cantidad de código duplicado, mejorar la legibilidad y la mantenibilidad del código y hacer que el desarrollo sea más eficiente y organizado. ¡Optimiza tu código con patrones de diseño en Java! "
+
+
+## Los 5 patrones de diseño más utilizados en Java son:
+
+::: {.summary}
+ 👉**Developer skills summary**
+
+- Patrón de Singleton
+- Patrón de Fabrica
+- Patrón de Estrategia
+- Patrón Observer
+- Patrón Decorador
+:::
+
+---
+
+- Patrón de Singleton: Asegura que una clase solo tenga una instancia y provee un punto de acceso global a ella.
+
+- Patrón de Fabrica: Define una interfaz para crear objetos en una superclase, pero deja que las subclases decidan qué clases crear.
+
+- Patrón de Estrategia: Define una familia de algoritmos, encapsula cada uno y los hace intercambiables.
+
+- Patrón de Observer: Define una dependencia uno-a-muchos entre objetos, de manera que cuando un objeto cambia su estado, todos sus dependientes son notificados y actualizados automáticamente.
+
+- Patrón de Decorador: Anade responsabilidades a objetos dinámicamente en tiempo de ejecución.
+
+---
+## Ejemplos de código con Patrones de Diseño
+---
+
+::: {.panel-tabset}
+## Singleton
+
+``` {.java}
+
+
+public class Singleton {
+  private static Singleton instance = null;
+
+  private Singleton() {}
+
+  public static Singleton getInstance() {
+    if (instance == null) {
+      instance = new Singleton();
+    }
+    return instance;
+  }
+
+}
+
+
+
+ En este ejemplo, la clase Singleton contiene
+ una única propiedad estática llamada instance,
+ que es una instancia de la clase Singleton.
+ La clase tiene un constructor privado para 
+ evitar que la clase sea instanciada
+ por cualquier otra parte del código.
+
+La clase tiene un método estático llamado 
+getInstance que es el único punto de
+acceso a la instancia de la clase. 
+Si la propiedad instance todavía es null,
+se crea una nueva instancia de la clase Singleton.
+De lo contrario, se retorna la instancia existente.
+
+Este patrón garantiza que la clase solo tenga
+una única instancia, lo que asegura que los datos 
+compartidos en la aplicación sean consistentes y seguros.
+
+
+
+```
+
+## Fabrica
+
+``` {.java}
+
+Ejemplo de código de Patrón de Diseño de fábrica en Java:
+
+interface Shape {
+   void draw();
+}
+
+class Circle implements Shape {
+   @Override
+   public void draw() {
+      System.out.println("Se dibuja un círculo");
+   }
+}
+
+class Rectangle implements Shape {
+   @Override
+   public void draw() {
+      System.out.println("Se dibuja un rectángulo");
+   }
+}
+
+class Square implements Shape {
+   @Override
+   public void draw() {
+      System.out.println("Se dibuja un cuadrado");
+   }
+}
+
+class ShapeFactory {
+   public Shape getShape(String shapeType) {
+      if (shapeType == null) {
+         return null;
+      }
+      if (shapeType.equalsIgnoreCase("CIRCLE")) {
+         return new Circle();
+      } else if (shapeType.equalsIgnoreCase("RECTANGLE")) {
+         return new Rectangle();
+      } else if (shapeType.equalsIgnoreCase("SQUARE")) {
+         return new Square();
+      }
+      return null;
+   }
+}
+
+class FactoryPatternDemo {
+   public static void main(String[] args) {
+      ShapeFactory shapeFactory = new ShapeFactory();
+
+      Shape shape1 = shapeFactory.getShape("CIRCLE");
+      shape1.draw();
+
+      Shape shape2 = shapeFactory.getShape("RECTANGLE");
+      shape2.draw();
+
+      Shape shape3 = shapeFactory.getShape("SQUARE");
+      shape3.draw();
+   }
+}
+
+
+
+
+
+Este código ilustra una implementación 
+básica del patrón de diseño de fábrica en Java.
+La clase ShapeFactory es una fábrica que
+produce objetos de diferentes tipos de formas.
+En el método getShape de la clase ShapeFactory,
+se determina qué tipo de forma se desea crear 
+en función del argumento shapeType.
+Luego, se devuelve la forma apropiada.
+El programa principal en la clase FactoryPatternDemo 
+usa la fábrica para crear diferentes
+objetos de formas y dibujar los objetos.
+
+
+
+
+
+```
+
+## Estrategia
+
+```{.java}
+
+Ejemplo de código utilizando el Patrón de Diseño Estrategia 
+
+import java.util.ArrayList;
+import java.util.List;
+
+interface Strategy {
+    int doOperation(int num1, int num2);
+}
+
+class AdditionStrategy implements Strategy {
+    @Override
+    public int doOperation(int num1, int num2) {
+        return num1 + num2;
+    }
+}
+
+class SubtractionStrategy implements Strategy {
+    @Override
+    public int doOperation(int num1, int num2) {
+        return num1 - num2;
+    }
+}
+
+class Context {
+    private Strategy strategy;
+
+    public Context(Strategy strategy) {
+        this.strategy = strategy;
+    }
+
+    public int executeStrategy(int num1, int num2) {
+        return strategy.doOperation(num1, num2);
+    }
+}
+
+public class StrategyPatternExample {
+    public static void main(String[] args) {
+        List<Context> contexts = new ArrayList<>();
+        contexts.add(new Context(new AdditionStrategy()));
+        contexts.add(new Context(new SubtractionStrategy()));
+
+        for (Context context : contexts) {
+            System.out.println("10 + 5 = " + context.executeStrategy(10, 5));
+            System.out.println("10 - 5 = " + context.executeStrategy(10, 5));
+        }
+    }
+}
+
+
+El patrón de diseño de estrategia permite 
+seleccionar una estrategia de entre
+varias posibles al resolver un problema,
+de manera que se puedan cambiar las estrategias
+en tiempo de ejecución sin tener que modificar
+el código que utiliza la estrategia.
+En este ejemplo, el contexto es el que
+selecciona la estrategia para realizar 
+una operación matemática específica
+(suma o resta), y el código que utiliza
+la estrategia no necesita conocer los
+detalles de cómo se realiza la 
+operación, sólo invoca el método
+executeStrategy del contexto.
+
+
+```
+
+## Observer
+
+```{.java}
+Ejemplo de código en Java para uso de Patron Observer
+
+import java.util.ArrayList;
+import java.util.List;
+
+interface Observer {
+    void update();
+}
+
+interface Subject {
+    void registerObserver(Observer observer);
+    void removeObserver(Observer observer);
+    void notifyObservers();
+}
+
+class ConcreteObserver implements Observer {
+    private int state;
+
+    @Override
+    public void update() {
+        // Actualizar el estado del observador con el estado del sujeto
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+}
+
+class ConcreteSubject implements Subject {
+    private List<Observer> observers = new ArrayList<>();
+    private int state;
+
+    @Override
+    public void registerObserver(Observer observer) {
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(Observer observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        for (Observer observer : observers) {
+            observer.update();
+        }
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+        notifyObservers();
+    }
+}
+
+public class ObserverPatternExample {
+    public static void main(String[] args) {
+        ConcreteSubject subject = new ConcreteSubject();
+
+        ConcreteObserver observer1 = new ConcreteObserver();
+        ConcreteObserver observer2 = new ConcreteObserver();
+
+        subject.registerObserver(observer1);
+        subject.registerObserver(observer2);
+
+        subject.setState(5);
+
+        System.out.println("Observer 1: " + observer1.getState());
+        System.out.println("Observer 2: " + observer2.getState());
+    }
+}
+
+El patrón de diseño Observer permite que un objeto,
+conocido como sujeto, notifique a sus dependientes,
+conocidos como observadores, cuando su estado cambia.
+En este ejemplo, el sujeto es ConcreteSubject y 
+los observadores son ConcreteObserver.
+El sujeto mantiene una lista de observadores registrados,
+y los notifica a todos cuando su estado cambia,
+invocando el método update de cada uno.
+Los observadores actualizan su propio estado
+en respuesta a la notificación.
+
+
+
+```
+
+## Decorador
+
+
+
+```{.java}
+
+interface Component {
+    String operation();
+}
+
+class ConcreteComponent implements Component {
+    @Override
+    public String operation() {
+        return "Concrete Component";
+    }
+}
+
+abstract class Decorator implements Component {
+    protected Component component;
+
+    public Decorator(Component component) {
+        this.component = component;
+    }
+
+    @Override
+    public String operation() {
+        return component.operation();
+    }
+}
+
+class ConcreteDecoratorA extends Decorator {
+    public ConcreteDecoratorA(Component component) {
+        super(component);
+    }
+
+    @Override
+    public String operation() {
+        return "Concrete Decorator A (" + super.operation() + ")";
+    }
+}
+
+class ConcreteDecoratorB extends Decorator {
+    public ConcreteDecoratorB(Component component) {
+        super(component);
+    }
+
+    @Override
+    public String operation() {
+        return "Concrete Decorator B (" + super.operation() + ")";
+    }
+}
+
+public class DecoratorPatternExample {
+    public static void main(String[] args) {
+        Component component = new ConcreteComponent();
+        System.out.println("Result: " + component.operation());
+
+        component = new ConcreteDecoratorA(component);
+        System.out.println("Result: " + component.operation());
+
+        component = new ConcreteDecoratorB(component);
+        System.out.println("Result: " + component.operation());
+    }
+}
+
+El patrón de diseño Decorador permite agregar
+dinámicamente responsabilidades adicionales a un objeto.
+En este ejemplo, la interfaz Component define 
+la operación a decorar y la clase ConcreteComponent
+implementa la operación sin ninguna decoración.
+Las clases ConcreteDecoratorA y ConcreteDecoratorB
+son decoradores que agreguen responsabilidades
+adicionales a la operación original.
+En la función main, se crea un objeto
+ConcreteComponent y se lo decoran con ConcreteDecoratorA
+y ConcreteDecoratorB para ver cómo cambia la operación.
+```
+:::
+
+

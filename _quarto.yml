@@ -1,0 +1,210 @@
+project:
+  type: website
+
+website:
+  title: Welcome ComboBackend
+
+  repo-url: https://github.com/leonpurple/wikicruz
+  repo-actions: [edit, issue]
+
+  navbar:
+    background: dark
+    style: "floating"
+    search: true
+    
+    right:
+           - text: Home #HOME
+             file: index.qmd
+           - sidebar:javase  
+           - sidebar:spring-boot
+           - sidebar:designpatterns  
+           - sidebar:aboutgit
+           #- sidebar:aboutgithub
+           #- sidebar:aboutuml
+           - sidebar:programmingparadigms #ADD FEATURES
+           - sidebar:labs
+           - sidebar:books
+           - sidebar:vocabulary
+           - sidebar:technical-vocabulary
+           #- sidebar:vocabulary-regulars-verbs
+           - sidebar:about
+
+  #INIT NAV          
+  sidebar:
+
+      #javase
+    - id: "javase" 
+      title: "JavaSE" 
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Java SE"
+        - text: "---"
+        - section: "flow Java SE"
+          contents:
+          - javase/javase.qmd
+          
+          #SPRING BOOT
+    - id: "spring-boot" 
+      title: "Spring Boot" 
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Spring Boot"
+        - text: "---"
+        - section: "flow Git"
+          contents:
+          - spring-boot/spring-boot.qmd
+
+          #ABOUTGIT
+    - id: "aboutgit" 
+      title: "Git" 
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Git"
+        - text: "---"
+        - section: "flow Git"
+          contents:
+          - aboutgit/aboutgit.qmd
+
+
+        
+      #ABOUT DesignPatterns-HUB
+    - id: "designpatterns" 
+      title: "Desing Patterns"  
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Desing Patterns"
+        - text: "---"
+        - section: "Super Info" 
+          contents:
+          - designpatterns/designpatterns.qmd 
+
+      
+      #PROGRAMMING PARDIGMS
+    - id: "programmingparadigms"
+      title: "Programming Paradigms"  
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Programming Paradigms" 
+        - text: "---" 
+        - section: "Super Info "
+          contents:
+          - programmingparadigms/programmingparadigms.qmd
+
+      #BOOKS
+    - id: "books" 
+      title: "Books"  
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Books"
+        - text: "---"
+        - section: "Super Info" 
+          contents:
+          - books/books.qmd 
+
+      #LABS
+    - id: "labs" 
+      title: "Labs"  
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Labs"
+        - text: "---"
+        - section: "Super Info" 
+          contents:
+          - labs/labs.qmd       
+
+      #VOCABULARY
+    - id: "vocabulary"
+      title: "Vocabulary"  
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Vocabulary" 
+        - text: "---" 
+        - section: "Super Info "
+          contents:
+          - vocabulary/vocabulary.qmd   
+
+      #TECH - VOCABULARY
+    - id: "technical-vocabulary"
+      title: "Technical Vocabulary"  
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "Technical Vocabulary" 
+        - text: "---" 
+        - section: "Super Info "
+          contents:
+          - technical-vocabulary/technical-vocabulary.qmd
+          
+      #ABOUT 
+    - id: "about"
+      title: "About"  
+      border: true
+      background: none
+      style: "floating"
+      contents:
+        - text: "About" 
+        - text: "---" 
+        - section: "Super Info "
+          contents:
+          - about/about.qmd        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+       
+         
+      
+        
+        
+    
+  page-footer: 
+    background: dark
+    left: "[Magazine CruzMartinez](https://github.com/leonpurple/wikicruz)" 
+    center: "" 
+    right: 
+      - icon: github
+        href: https://github.com/leonpurple/wikicruz/
+       
+        
+    
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+

@@ -1,0 +1,22 @@
+---
+title: "General Vocabulary"
+subtitle: Transitive Verbs
+author: Cruz Martinez
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+
+categories: [vocabulary]
+toc: true
+number-sections: true
+format:
+  html
+---
+---
+**transitive vs. Intransitive:** A transitive verb requires a direct object to complete its meaning, while an intransitive verb does not. 
+
+For example:
+
+ in the sentence **"I eat an apple"**, **"eat"** is a transitive verb because it has a direct object (**"an apple"**).
+
+ On the other hand, in the sentence **"I sleep" (I sleep), "sleep"** is an intransitive verb because it does not have a direct object.

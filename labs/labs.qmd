@@ -1,0 +1,116 @@
+---
+title: "Laboratories"
+categories: [projects, training]
+---
+
+
+![Backlog course](/images/laboratories/laboratories.jpg){width="30%"}
+
+Always in **Quarto-Markdown format** and code in GitHub repositories or Organitzations.
+
+Deliveries **via github:**
+
+
+| Code | Date | Description|
+|---|---|---|
+| **[to apph2](https://github.com/leonpurple/labsCifo/tree/main/apph2/apph2)**  | **10/05/2023**  | **Delivery** |
+
+
+Three-tier architecture (controller, service, repository)
+
+### Dependencies:
+* Lombok
+* Spring Web
+* DeveloperTools
+* H2 Database
+* Spring Data JPA
+
+[configuration file:
+application.properties]()
+
+### Entity Modeling
+**notations**
+
+* @Entity
+* @Table
+* @Data
+
+
+### Create Sevice Methods
+in this app I call the controller through the interface
+with the
+**notation**
+
+* @Service
+
+in this interface the contracts are defined which the business logic is implemented
+The first thing is to call the Repository
+
+**jpa**
+  The **JpaRepository** extension makes it possible for the Interface to use these implicit methods
+
+[Functional Programming: Exceptions]()
+
+Logic in the methods implemented in UserServiceImp.java with **Jpa**
+
+### Create Controller
+the UserController.java class will make use of the service via URL
+class stereotyped with the 
+**notation**
+
+* @Rescontroller
+
+### HTTP Verbs for Rest Services
+
+* @PostMaping
+* @GetMapping
+* @PutMapping
+* @DeleteMapping 
+
+
+::: {.summary}
+![postman method saveUserId()](/images/deliverys/saveUserId.jpg){width="60%"}
+:::
+
+::: {.summary}
+![postman method getUser()](/images/deliverys/getUser.jpg){width="60%"}
+:::
+
+::: {.summary}
+![postman method deleteUser()](/images/deliverys/deleteUser.jpg){width="60%"}
+:::
+
+:::{.summary}
+![postman ERROR method upDate()](/images/deliverys/error_metodo_update.jpg){width="60%"}
+:::
+### consola H2 Data Base
+:::{.summary}
+![console H2](/images/deliverys/console_h2.jpg){width="60%"}
+:::
+
+
+
+
+
+---
+| Code | Date | Description|
+|---|---|---|
+| **[to apph2react](https://github.com/leonpurple/labsCifo-2/tree/main/apph2react)**  | **10/05/2023**  | **Delivery** |
+
+Create the apph2react to consume data from the rest api apph2 Backend Spring boot.
+
+axios library for hhtp requests with [fetch]() await method
+
+I install axios through the command line by entering the directory of the current react project
+
+```
+cd apph2react
+npm i axios
+```
+
+I create the main file for the **Userlist.jsx** component and to declare it inside the fragment that the **App.js** component returns
+
+### react application consuming apph2 backend
+:::{.summary}
+![console H2](/images/deliverys/apph2reactjpg.jpg){width="60%"}
+:::

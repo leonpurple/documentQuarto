@@ -1,0 +1,38 @@
+---
+title: "General Vocabulary"
+subtitle: Regulars Verbs
+author: Cruz Martinez
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+
+categories: [vocabulary]
+toc: true
+number-sections: true
+format:
+  html
+---
+---
+
+Regular verbs in English are characterized by following a rule to form the simple past and past participle. This rule generally consists of adding "-ed" to the infinitive of the verb. For example, the verb "walk" becomes "walked" in simple past and past participle. However, there are some exceptions to this rule, such as verbs that end in "e" and only need to add a "d," or verbs that change the last letter of the infinitive by adding "-ed."
+
+In summary, regular verbs in English are those that follow a rule to form the simple past and past participle by adding "-ed" to the infinitive of the verb. Although there are some exceptions, most regular verbs follow this rule. Knowing this rule makes it easier to learn and remember how to conjugate regular verbs in English.
+
+Generally, regular verbs in English are divided into three groups according to the way "-ed" is added to form the past and past participle. Below is a list of regular verbs in English, separated by group:
+
+::: {.summary}
+
+| Infinitive | Simple Past | Past Participio |
+|:--|:--|:--|
+| carry | carried | carried |
+| copy | copied | copied |
+| cry | cried | cried |
+| dry |	dried |	dried |
+| fry |	fried |	fried |
+| hurry | hurried |	hurried |
+| marry | married | married |
+| study | studied |	studied |
+| try | tried | tried |
+| worry | worried | worried |
+
+:::

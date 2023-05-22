@@ -1,0 +1,24 @@
+---
+title: "General Vocabulary"
+subtitle: Modals Verbs
+author: Cruz Martinez
+date: "06/01/2021"
+date-modified: last-modified
+date-format: full
+
+categories: [vocabulary]
+toc: true
+number-sections: true
+format:
+  html
+---
+---
+
+**Modal verbs:** They are a group of auxiliary verbs that are used to express possibility, obligation, permission, etc.
+
+  The most common modal verbs are:
+  
+::: {.summary}
+  **can - could - may - might - must -  shall - should - will - would.**
+:::
+  These verbs do not conjugate and do not have infinitives, gerunds, or participles.

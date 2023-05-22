@@ -1,0 +1,25 @@
+---
+title: "General Vocabulary"
+subtitle: Learning English terms and definitions
+author: Cruz Martinez 
+date: "27/03/2023"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [vocabulary]
+toc: true
+number-sections: true
+format:
+  html
+---
+![Technical terms and definitions](/images/vocabulary/vocabulary-logo-principal-01.png){width=60%}
+
+## Vocabulary
+
+
+| [ regulars verbs ](vocabulary-regulars-verbs.qmd) |
+| [ irregulars verbs ](vocabulary-irregular-verbs.qmd)|
+| [ transitive vs. Intransitive ](vocabulary-transitevsintransitive.qmd) |
+| [ modal verbs ](vocabulary-modals-verbs.qmd)|
+| [ Compound verbs ](vocabulary-compound-verbs.qmd) |
+|  [ Reflexive verbs ](vocabulary-reflexive-verbs.qmd) |

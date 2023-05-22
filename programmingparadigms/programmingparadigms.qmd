@@ -1,0 +1,59 @@
+---
+title: "Programming Paradigms"
+---
+![](/images/programmingparadigms/programmingparadigms001.png)
+
+##  Los paradigmas adecuados puede marcar la diferencia en la calidad y eficiencia del código producido
+
+::: {.summary}
+👉 **Developer skills summary**
+
+- Imperative Paradigm
+- Functional Paradigm
+- Declarative Paradigm
+- Reactive Paradigm
+- Object Oriented Paradigms
+:::
+
+---
+
+
+**Los paradigmas de programación** son un conjunto de herramientas y técnicas que facilitan la resolución de problemas y la implementación de soluciones efectivas en el desarrollo de software. **Conocer y aplicar los paradigmas adecuados puede marcar la diferencia en la calidad y eficiencia del código producido**, por lo que es **importante** *que los programadores estén familiarizados con los principales paradigmas utilizados en el mercado*.
+
+## 5 tipos de paradigmas de programación
+Existen varios tipos de paradigmas de programación que se deben elegir en función del lenguaje de programación que se utilice. La elección adecuada de los paradigmas garantizará que el proceso de programación sea eficiente y sin problemas. 
+Aquí te presentaremos 5 de los paradigmas de programación más importantes.
+
+## Paradigma Imperativo
+En el mundo de la programación, **el paradigma imperativo o de procedimientos** *es uno de los más populares*. Este enfoque permite a los programadores crear software mediante la definición de procedimientos detallados. Se utiliza una serie de instrucciones que explican de manera clara y concisa el funcionamiento del código, permitiendo a los usuarios seguir el proceso con facilidad.
+
+## Paradigma Funcional
+**El paradigma funcional** se basa en el uso de funciones matemáticas para lograr un resultado. Este tipo de programación *se enfoca en el resultado deseado y no tanto en los detalles de cómo se llega a él*. Esto lo hace ideal para el ámbito académico, donde se busca comprender conceptos profundos y no necesariamente crear soluciones eficientes en términos de tiempo y recursos. Es un enfoque distinto al del paradigma imperativo, donde se preocupa más por las instrucciones y pasos que llevan a un resultado.
+
+## Paradigma Declarativo
+**El paradigma declarativo** se enfoca en el resultado desde el comienzo. Con un enfoque en la determinación automática del camino hacia una solución, este paradigma puede ser muy eficiente en la programación, siempre y cuando se tenga una comprensión clara del proceso que se está llevando a cabo
+
+## Paradigma Reactivo
+**Paradigma reactivo**: Este enfoque *se centra en el análisis de los flujos de datos*, tanto finitos como infinitos, con el objetivo de responder a las demandas durante el desarrollo del proyecto, manteniendo un alto nivel de escalabilidad y una rápida respuesta a los cambios en los valores generados por los flujos de datos.
+
+## Paradigmas orientados a objetos
+En **el paradigma orientado a objetos**, *se enfoca en trabajar con objetos y componentes de código. Cada objeto es una pieza independiente que, cuando se combina con otros, forma parte del sistema que está siendo desarrollado*. Este enfoque proporciona una estructura clara y eficiente para el proceso de programación.
+
+
+::: {.summary}
+
+|**Lenguaje**     |**Paradigmas**                                                              |
+|-----------------|----------------------------------------------------------------------------|
+|**Scala**        |*Imperativo, orientado a objetos, funcional, genérico y concurrente*        |
+|**Erlang**       |*Funcional, orientado a objetos y funcional*                                |
+|**Perl**         |*Imperativo, orientado a objetos y funcional*                               |
+|**PHP**          |*Imperativo, orientado a objetos, funcional y reflexivo*                    |
+|**JavaScript**   |*Imperativo, orientado a objetos (prototipos) y funcional*                  |
+|**Java**         |*Imperativo, orientado a objetos, reflexivo y genérico*                     |
+|**Python y Ruby**|*Imperativo, orientado a objetos, reflexivo y funcional*                    |
+|**C++**          |*Imperativo, orientado a objetos, funcional y genérico*                     |
+|**C#**           |*Imperativo, orientado a objetos, funcional (lambda), reflexivo y genérico* |
+|**Lisp**         |*Orientado a objetos, funcional y declarativo*                              |
+|**Prolog**       |*Lógico y declarativo*                                                      |
+
+:::

@@ -1,0 +1,14 @@
+---
+title: "General Vocabulary"
+subtitle: Technical Vocabulary, of different tools and programming jargon, terms and definitions generales
+author: Cruz Martinez 
+date: "27/03/2023"
+date-modified: last-modified
+date-format: full
+description: description
+categories: [vocabulary]
+toc: true
+number-sections: true
+format:
+  html
+---
